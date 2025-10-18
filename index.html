@@ -1,47 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Turning Clicks into Clean Water</title>
+  <meta name="description" content="Support clean, safe water projects. Track your impact from donation to delivery." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0b10;
+      --card: #121218;
+      --muted: #9aa3ae;
+      --accent: #f7c400;
+      --text: #f4f6f8;
+      --ring: rgba(247,196,0,.35);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, sans-serif;
+  background: #257EC6; /* slightly darker brand blue for better contrast */
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { width: min(1120px, 92%); margin: 0 auto; }
+    header { padding: 28px 0; }
+    .brand {
+      display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text);
+    }
+    .brand img { width: 40px; height: 40px; }
+    .brand span { font-weight: 800; letter-spacing: .3px; }
+    .nav-cta a {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: #1f2937;
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid #2a2f3b;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 28px;
+      padding: 32px 0 10px;
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; padding-top: 8px; }
+    }
+    .pill {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(247,196,0,.08);
+      border: 1px solid rgba(247,196,0,.25);
+      color: var(--accent);
+      padding: 8px 14px; border-radius: 999px; font-weight: 600; font-size: 14px;
+    }
+    .title {
+      font-size: clamp(32px, 6vw, 64px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin: 14px 0 10px;
+      font-weight: 800;
+    }
+  .subtitle { color: #ffffff; font-size: clamp(16px, 2.6vw, 18px); max-width: 60ch; }
+    .cta-row { display: flex; gap: 14px; margin-top: 22px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--accent);
+      color: #1a1300;
+      text-decoration: none; font-weight: 800;
+      padding: 14px 20px; border-radius: 14px;
+      display: inline-flex; align-items: center; gap: 10px;
+      box-shadow: 0 10px 26px var(--ring);
+      border: none;
+    }
+    .btn-secondary {
+      background: transparent; color: var(--text);
+      text-decoration: none; font-weight: 700;
+      padding: 14px 18px; border-radius: 14px;
+      border: 1px solid #2a2f3b;
+    }
+    .hero-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.0));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 20px; padding: 22px;
+      position: relative; overflow: hidden;
+      min-height: 260px;
+    }
+    .kpi { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-top: 24px; }
+    @media (max-width: 700px) { .kpi { grid-template-columns: 1fr; } }
+    .kpi .item {
+      background: #12121a; border: 1px solid rgba(255,255,255,.06);
+      padding: 16px; border-radius: 16px;
+    }
+    .kpi .item strong { font-size: 22px; display: block; }
+    section { padding: 42px 0; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: 16px; padding: 20px;
+    }
+    .card h3 { margin: 6px 0 8px; }
+    footer {
+      padding: 40px 0 60px; color: var(--muted); font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
+  <header>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:16px;">
+      <a class="brand" href="#">
+        <img src="f77b007a-fc72-48c2-b624-603de5c2318b.png" alt="Water can logo" />
+  <span>Charity Water</span>
+      </a>
+      <nav class="nav-cta">
+        <a href="#donate">Donate Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
     <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
-
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
-
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
+      <div>
+        <span class="pill">
+          <img src="f77b007a-fc72-48c2-b624-603de5c2318b.png" style="width:18px;height:18px;" alt="" />
+          Turning impact into access
+        </span>
+        <h1 class="title">Turning clicks into clean water</h1>
+        <p class="subtitle">
+          Safe drinking water changes everything — health, education, and opportunity.
+          Join us to fund sustainable water projects and follow your impact as it moves
+          from donation to delivery.
+        </p>
+        <div class="cta-row">
+          <a class="btn-primary" href="#donate">Donate Now!</a>
+          <a class="btn-secondary" href="#how-it-works">How it works</a>
         </div>
+        <div class="kpi">
+          <div class="item"><strong>100%</strong><span>of your attention matters — every share and donation helps reach more people.</span></div>
+          <div class="item"><strong>Local</strong><span>partners help build and maintain community-owned systems.</span></div>
+          <div class="item"><strong>Transparent</strong><span>project milestones and updates keep you in the loop.</span></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div style="display:flex;align-items:center;gap:14px;">
+          <img src="f77b007a-fc72-48c2-b624-603de5c2318b.png" style="width:64px;height:64px;" alt="" />
+          <div>
+            <div style="font-weight:800;">Charity Water</div>
+            <div style="color:#9aa3ae;">Your donation → real world change</div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
+    <section id="about">
+      <div class="grid">
+        <article class="card">
+          <h3>What is charity: water?</h3>
+          <p>
+            charity: water is a nonprofit organization focused on bringing clean, safe drinking water to people in need around the world.
+            By funding wells, taps, and other community-led water solutions, they help unlock better health, more time for school and work,
+            and stronger local economies.
+          </p>
+        </article>
+        <article class="card" id="how-it-works">
+          <h3>How your gift is put to work</h3>
+          <p>
+            Donations support proven water projects delivered with trusted local partners. From planning and construction
+            to training and long-term maintenance, the goal is reliable access that communities can sustain.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Track your impact</h3>
+          <p>
+            After you give, you’ll receive project updates so you can follow along — including where funds are headed,
+            progress milestones, and stories from the field. Many projects share location details, photos, and completion reports,
+            so you can see the impact you helped create.
+          </p>
+        </article>
+      </div>
     </section>
+
+    <section id="donate">
+      <div class="card" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+        <div>
+          <h3 style="margin:0 0 6px;">Make a donation</h3>
+          <p style="margin:0;color:#9aa3ae">Every contribution helps bring clean water to another household.</p>
+        </div>
+        <a class="btn-primary" href="https://www.charitywater.org/donate" target="_blank" rel="noopener">
+          Donate Now!
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div>© 2025 Clean Water Project. This page is a demo built for educational and advocacy purposes.</div>
+  </footer>
 </body>
 </html>
